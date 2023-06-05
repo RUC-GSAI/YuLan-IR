@@ -24,8 +24,17 @@ In general, there includes five steps/modules in our RETA-LLM tookit.
 The requirements of our RETA-LLM toolkit is wrapped in the `environment.yml` file, install them by :
 
 ```
+ cd the-root-path-of-this-repository 
  conda env create -f environment.yml
  conda activate retallm
+ 
+ pip install adapter-transformers --force-reinstall
+ pip install transformers==4.28.0 --force-reinstall
+ git clone https://github.com/adapter-hub/adapter-transformers.git  
+ mv adapter-transformers adaptertransformers
+
+ #The above four lines are used to fix the conflicts between adapter-transformers and transfomers. Please don't adjust the order bewteen them.
+
 ```
 
 
@@ -49,13 +58,13 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `json_data` is the ouput data directory containing json files.
    
-2. run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index and conduct domain-adaption.
+2. run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index.
    ```
    cd indexer
-   python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type title --train_dam_flag
+   python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type all --train_dam_flag
    cd ..
    ```
-   The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
+   The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption with the args `--train_dam_flag`. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
 
 3. Prepare an LLM and its generating configuration json file in the `system` folder. An example json for LLama and ChatGLM is shown in `system/llm_llama.json` and `system/llm_chatglm.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
 
