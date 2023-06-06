@@ -15,6 +15,8 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Usage](#usage)
+- [To-Do](#to-do)
+- [Maintainers](#maintainers)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -98,7 +100,21 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
 
+## To-Do
 
+- [ ] Add active retreival augumentation.
+- [ ] More modulized and configurable.
+- [ ] ...
+
+
+
+## Maintainers
+   
+<div>
+    <a href="https://github.com/rucliujn">@Jiongnan Liu</a>
+</div>
+
+    
 
 ## Acknowledgements
 RETA-LLM is part of YuLan, a open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
