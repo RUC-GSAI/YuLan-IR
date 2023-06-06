@@ -17,9 +17,9 @@ class Fact_Checker():
         #answer_input = fact_checking_template.format(reference = reference, answer = answer)
         #input_text = global_no_demon_template.format(input=answer_input)
         #output = generate_response(self.model, self.tokenizer, input_text, **kwargs)
-        #if ("no" in output or "No" in ouput or "NO" in output) :
+        #if ("no" in output or "No" in output or "NO" in output) :
         #    return True
-        #if ("yes" in output or "Yes" in ouput or "YES" in output) :
+        #if ("yes" in output or "Yes" in output or "YES" in output) :
         #    return False
         #return True
         return True
