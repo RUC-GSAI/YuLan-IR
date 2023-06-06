@@ -1,0 +1,62 @@
+{
+    "model_name": "Yulan 13b v18",
+    "model_path": "../../yulan_13b",
+    "device": "cuda:0",
+    "generate_parameter": {
+        "temperature": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 0.0,
+                "max_value": 2.0,
+                "value": 0.001
+            }
+        },
+        "top_p": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 0.0,
+                "max_value": 1.0,
+                "value": 0.001
+            }
+        },
+        "top_k": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 0,
+                "max_value": 100,
+                "value": 50
+            }
+        },
+        "do_sample": {
+            "component": "select_slider",
+            "kwargs": {
+                "options": [false, true],
+                "value": false
+            }
+        },
+        "repetition_penalty": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 1.0,
+                "max_value": 1.5,
+                "value": 1.1
+            }
+        },
+        "no_repeat_ngram_size": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 0,
+                "max_value": 100,
+                "value": 64
+            }
+        },
+        "max_length": {
+            "component": "number_input",
+            "kwargs": {
+                "min_value": 512,
+                "max_value": 65536,
+                "value": 65536
+            }
+        }
+    }
+}
