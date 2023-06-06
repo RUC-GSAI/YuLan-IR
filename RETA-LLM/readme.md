@@ -68,7 +68,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    `file name(without ".html") \t url`
 
    We give example data and url_file in `sample_data.zip` and `sample_url.txt`. 
-   Follow the usage guidelines, you can build a RUC-admission-assistant using them.
+   Follow the usage guidelines, you can build a RUC-enrollment-assistant using them.
    ```
    unzip sample_data.zip
    mv sample_data raw_data
