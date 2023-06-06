@@ -29,7 +29,7 @@ fact_checking_template = fact_checking_template_en
 
 
 #model_config
-model_config_path = "./llm_yulan.json" #config path for LLM
+model_config_path = "./llm_yulan_small.json" #config path for LLM
 openai_api_key = "your-key"
 model_config = json.load(open(model_config_path, "r"))
 kwargs = {}
