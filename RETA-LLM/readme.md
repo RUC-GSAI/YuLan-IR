@@ -10,7 +10,7 @@ Large Language Models (LLMs) have shown extraordinary abilities in many areas. H
 
 To support research in this area and help users build their own in-domain QA system, we devise **RETA-LLM**, a **RET**reival-**A**ugmented LLM toolkit. Compared with previous LLM toolkits such as Langchains, our RETA tookit focuses on retrieval-augmented LLMs and provides more optional plug-in modules. We also disentangles the LLMs and IR system more entirely, which makes you can customize search engines and LLMs.
 
-The overall framework of our toolkit is shown as follows: ![RETA-LLM Framework](./resource/framework.png)
+The overall framework of our toolkit is shown as follows: ![RETA-LLM Framework](./resource/framework.jpg)
 
 In general, there includes five steps/modules in our RETA-LLM tookit. 
 
