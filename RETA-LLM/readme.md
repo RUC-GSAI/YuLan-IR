@@ -6,7 +6,7 @@
 </div>
 
 
-**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including {request rewriting, document retrieval, passage extraction, answer generation, and fact checking} modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://github.com/RUC-GSAI/YuLan-IR/blob/main/RETA-LLM/resource/paper.pdf).
+**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including **request rewriting, document retrieval, passage extraction, answer generation, and fact checking** modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://github.com/RUC-GSAI/YuLan-IR/blob/main/RETA-LLM/resource/paper.pdf).
 
 ## Table of Contents
 
