@@ -102,7 +102,9 @@ We provide a complete pipeline to help you use your own customized materials (e.
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
 
 ## Case
-   A case of in-domain QA supported by RETA-LLM is shown in ![RETA-LLM case](./resource/case_zh.jpg). In this case, we use the provided `sample_data` as external knowledge but conduct more fine-grained html parsing. 
+   ![RETA-LLM case](./resource/case_zh.jpg)
+   A case of in-domain QA supported by RETA-LLM is shown. In this case, we use the provided `sample_data` as external knowledge but conduct more fine-grained html parsing.
+
 
 ## To-Do
 
