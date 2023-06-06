@@ -1,6 +1,25 @@
-# RETA-LLM
+<div align=center>
+<h1>RETA-LLM： A Retrieval-Augmented Large Language Model Toolkit</h1>
+<a href="https://pypi.org/project/recbole/">
+    <img src="https://img.shields.io/badge/MIT-License-blue" alt="license">
+    <img src="https://img.shields.io/github/stars/RUC-GSAI/YuLan-IR" alt="license">
+</div>
 
-A RETrieval-Augmented Large Language Model Toolkit
+
+**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including **request rewriting, document retrieval, passage extraction, answer generation, and fact checking** modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://github.com/RUC-GSAI/YuLan-IR/blob/main/RETA-LLM/resource/paper.pdf).
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Background](#background)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [To-Do](#to-do)
+- [Maintainers](#maintainers)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 
 ## Background
 
@@ -81,7 +100,21 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
 
+## To-Do
 
+- [ ] Add active retreival augumentation.
+- [ ] More modulized and configurable.
+- [ ] ...
+
+
+
+## Maintainers
+   
+<div>
+    <a href="https://github.com/rucliujn">@Jiongnan Liu</a>
+</div>
+
+    
 
 ## Acknowledgements
 RETA-LLM is part of YuLan, a open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
@@ -92,4 +125,4 @@ Thanks Jingtao for the great implementation of [disentangled-retriever](https://
 
 
 ## License
-RETA-LLM uses MIT License. All data and code in this project can only be used for academic purposes.
+RETA-LLM uses [MIT License](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM/LICENSE). All data and code in this project can only be used for academic purposes.
