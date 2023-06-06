@@ -68,6 +68,11 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
    We give example data and url_file in `sample_data.zip` and `sample_url.txt`. 
    Follow the usage guidelines, you can build a RUC-admission-assistant using them.
+   ```
+   unzip sample_data.zip
+   mv sample_data raw_data
+   mv sample_url.txt url.txt
+   ```
 
 1. run the `html2json.py` in the `html2json` folder to convert html resources to json files.
    ```
@@ -103,7 +108,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
 ## Case
    ![RETA-LLM case](./resource/case_zh.jpg)
-   
+
    A case of in-domain QA supported by RETA-LLM is shown. In this case, we use the provided `sample_data` as external knowledge but conduct more fine-grained html parsing.
 
 
