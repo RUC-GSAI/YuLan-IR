@@ -10,8 +10,11 @@ class Fact_Checker():
         self.tokenizer = tokenizer
     
     def fact_check(self, reference, answer):
+        return True
         ### TBD
-        ### Following is a priliminary attempt for fact checking, which is problematic. So we simply return True for fact cheking
+        ### Following is a priliminary attempt for fact checking, which have not been sufficiently tested and verified. 
+        ### If you want to use the following code, we recommend to use YuLan-65B as LLM backbone.
+        ### So we simply return True for fact cheking
         ### We will soon release a useful version for this
 
         #answer_input = fact_checking_template.format(reference = reference, answer = answer)
@@ -22,4 +25,4 @@ class Fact_Checker():
         #if ("yes" in output or "Yes" in output or "YES" in output) :
         #    return False
         #return True
-        return True
+
