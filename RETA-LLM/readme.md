@@ -1,6 +1,7 @@
 <div align=center>
 <h1>RETA-LLM： A Retrieval-Augmented Large Language Model Toolkit</h1>
 <a href="https://pypi.org/project/recbole/">
+    <img src="https://img.shields.io/badge/MIT-License-blue" alt="license">
     <img src="https://img.shields.io/github/stars/RUC-GSAI/YuLan-IR" alt="license">
 </div>
 
