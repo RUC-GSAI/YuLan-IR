@@ -1,6 +1,25 @@
-# RETA-LLM
+<div align=center>
+<h1>RETA-LLM： A Retrieval-Augmented Large Language Model Toolkit</h1>
+<a href="https://pypi.org/project/recbole/">
+    <img src="https://img.shields.io/badge/MIT-License-blue" alt="license">
+    <img src="https://img.shields.io/github/stars/RUC-GSAI/YuLan-IR" alt="license">
+</div>
 
-A RETrieval-Augmented Large Language Model Toolkit
+
+**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including **request rewriting, document retrieval, passage extraction, answer generation, and fact checking** modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://github.com/RUC-GSAI/YuLan-IR/blob/main/RETA-LLM/resource/paper.pdf).
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Background](#background)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [To-Do](#to-do)
+- [Maintainers](#maintainers)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 
 ## Background
 
@@ -66,7 +85,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption with the args `--train_dam_flag`. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
 
-3. Prepare an LLM and its generating configuration json file in the `system` folder. An example json for LLama and ChatGLM is shown in `system/llm_llama.json` and `system/llm_chatglm.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
+3. Prepare an LLM and its generating configuration json file in the `system` folder. An example json for YuLan and ChatGLM is shown in `system/llm_yulan.json` and `system/llm_chatglm.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
 
 4. run the `web_demo.py` in `system` folder to start serving. 
    ```
@@ -81,13 +100,29 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
 
+## To-Do
 
+- [ ] Add active retreival augumentation.
+- [ ] More modulized and configurable.
+- [ ] ...
+
+
+
+## Maintainers
+   
+<div>
+    <a href="https://github.com/rucliujn">@Jiongnan Liu</a>
+</div>
+
+    
 
 ## Acknowledgements
 RETA-LLM is part of YuLan, a open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
+
 RETA-LLM is still under development and there are many issues that need to be solved with great efforts. We sincerely welcome contributions on this open source toolkit.
+
 Thanks Jingtao for the great implementation of [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever).
 
 
 ## License
-RETA-LLM uses MIT License. All data and code in this project can only be used for academic purposes.
+RETA-LLM uses [MIT License](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM/LICENSE). All data and code in this project can only be used for academic purposes.
