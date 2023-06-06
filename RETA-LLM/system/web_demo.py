@@ -53,7 +53,7 @@ def predict(input, history=[], history_rewrite_input=[], history_url=[]):
             if (fact_checker.fact_check(reference, output)) :
                 st.write(output)
             else :
-                output = "I cannot answer thsi request."
+                output = "I cannot answer this request."
                 st.write(output)
 
         history.append((input, reference, output))
