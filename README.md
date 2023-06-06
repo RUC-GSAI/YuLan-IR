@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/yulan.jpg" width="300px">
+<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/yulan.jpg" width="400px">
 </p>
 
 # YuLan-IR
