@@ -191,8 +191,3 @@ If you use the dataset in any publication or presentation, please cite:
 }
 ```
 
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=qhjqhj00/WebBrain&type=Date)](https://star-history.com/#qhjqhj00/WebBrain&Date)
-
