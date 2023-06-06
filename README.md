@@ -11,6 +11,6 @@ In this repository, we hope to explore the combination between Information Retri
 
 ## Current progress
 
-### [RETA-LLM](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM): 
-A Retrieval-Augmented Large Language Model Toolkit
+### RETA-LLM
+**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems. Find more about it in the [repository](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM).
 
