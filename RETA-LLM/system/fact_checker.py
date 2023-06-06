@@ -10,5 +10,15 @@ class Fact_Checker():
         self.tokenizer = tokenizer
     
     def fact_check(self, reference, answer):
-        #TBD
+        ### TBD
+        ### Following is a priliminary attempt for fact checking, which is problematic. So we simply return True for fact cheking
+        ### We will soon release a useful version for this
+
+        #answer_input = fact_checking_template.format(context = reference, answer = answer)
+        #input_text = global_no_demon_template.format(input=answer_input)
+        #output = generate_response(self.model, self.tokenizer, input_text, **kwargs)
+        #if ("no" in output or "No" in ouput or "NO" in output) :
+        #    return True
+        #if ("yes" in output or "Yes" in ouput or "YES" in output) :
+        #    return False
         return True

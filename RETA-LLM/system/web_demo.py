@@ -52,6 +52,9 @@ def predict(input, history=[], history_rewrite_input=[], history_url=[]):
             #STEP 5 Fact Verification
             if (fact_checker.fact_check(reference, output)) :
                 st.write(output)
+            else :
+                output = "I cannot answer thsi request."
+                st.write(output)
 
         history.append((input, reference, output))
         st.write("##### Reference URL:\n" + urls)

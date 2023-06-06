@@ -19,7 +19,7 @@ class Passage_Extractor():
             passage = ""
 
             for j in range(0, ref_length, extract_step) :             
-                extraction_input = passage_extraction_instruction.format(content = raw_reference["title"] + ":" + raw_reference["contents"][j : j + extract_window], question=query)
+                extraction_input = passage_extraction_template.format(content = raw_reference["title"] + ":" + raw_reference["contents"][j : j + extract_window], question=query)
                 real_extraction_input = global_template.format(demon1 = demon1, summary1 = summary1, demon2 = demon2, summary2 = summary2, input = extraction_input)
                 fragments = generate_response(self.model, self.tokenizer, real_extraction_input, **kwargs)
                 passage = passage + fragments + "\t"
