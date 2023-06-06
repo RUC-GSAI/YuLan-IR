@@ -1,4 +1,4 @@
-<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/logo.png" width="100px">
+<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/logo.png" width="300px">
 
 # YuLan-IR
 
