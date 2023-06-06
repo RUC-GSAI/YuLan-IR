@@ -1,7 +1,3 @@
-# RETA-LLM
-
-A RETrieval-Augmented Large Language Model Toolkit
-
 <div align=center>
 <h1>RETA-LLM： A Retrieval-Augmented Large Language Model Toolkit</h1>
 <a href="https://pypi.org/project/recbole/">
