@@ -126,6 +126,7 @@ RETA-LLM is still under development and there are many issues that need to be so
 ## Maintainers
 <div>
     <a href="https://github.com/rucliujn">@Jiongnan Liu</a>
+    <a href="https://github.com/ignorejjj">@Jiajie Jin</a>    
 </div>
 
     
