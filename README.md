@@ -1,6 +1,6 @@
 # YuLan-IR
 
-YuLan-IR is part of YuLan, a open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
+YuLan-IR is part of YuLan, an open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
 
 ## Overview
 
