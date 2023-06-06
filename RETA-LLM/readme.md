@@ -117,6 +117,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
 RETA-LLM is still under development and there are many issues that need to be solved with great efforts. We sincerely welcome contributions on this open source toolkit.
     
 - [ ] Better fact checking module.
+- [ ] Add parser for .doc / .pdf / .ppt resources.
 - [ ] Add active retreival augumentation.
 - [ ] More modulized and configurable.
 - [ ] ...
