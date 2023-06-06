@@ -2,6 +2,17 @@
 
 A RETrieval-Augmented Large Language Model Toolkit
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Background](#background)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+
 ## Background
 
 Large Language Models (LLMs) have shown extraordinary abilities in many areas. However, studies have shown that they still tend to hallucinate and generate responses opposite to facts sometimes. To solve these problems, researchers propose a new paradigm to strengthen LLMs with information retrieval systems (Retrieval-augmented LLMs), which enable LLMs to look up relevant contents from external IR system. Furthermore, by enhancing in-domain data resources, Retrieval-augmented LLMs can answer in-domain questions such as "Who is the dean of the Gaoling School of Artificial Intelligence of Renmin University of China?"
@@ -92,4 +103,4 @@ Thanks Jingtao for the great implementation of [disentangled-retriever](https://
 
 
 ## License
-RETA-LLM uses MIT License. All data and code in this project can only be used for academic purposes.
+RETA-LLM uses [MIT License](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM). All data and code in this project can only be used for academic purposes.
