@@ -1,4 +1,4 @@
-![Image text](https://github.com/RUC-GSAI/YuLan-IR/blob/main/logo.png)
+<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/logo.png" width="100px">
 
 # YuLan-IR
 
