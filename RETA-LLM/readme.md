@@ -15,6 +15,7 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Usage](#usage)
+- [Case](#case)
 - [To-Do](#to-do)
 - [Maintainers](#maintainers)
 - [Acknowledgements](#acknowledgements)
@@ -99,6 +100,9 @@ We provide a complete pipeline to help you use your own customized materials (e.
    For the LLMs, we provide the model loading and response template for LLama and ChatGLM in `load_model.py` and `model_response.py` in `system` folder, If you want to use other LLMs, please adjust these two files.
 
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
+
+## Case
+   A case of in-domain QA supported by RETA-LLM is shown in ![RETA-LLM case](./resource/case_zh.jpg). In this case, we use the provided `sample_data` as external knowledge but conduct more fine-grained html parsing. 
 
 ## To-Do
 
