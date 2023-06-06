@@ -114,7 +114,9 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
 
 ## To-Do
-
+RETA-LLM is still under development and there are many issues that need to be solved with great efforts. We sincerely welcome contributions on this open source toolkit.
+    
+- [ ] Better fact checking module.
 - [ ] Add active retreival augumentation.
 - [ ] More modulized and configurable.
 - [ ] ...
@@ -122,7 +124,6 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
 
 ## Maintainers
-   
 <div>
     <a href="https://github.com/rucliujn">@Jiongnan Liu</a>
 </div>
@@ -130,10 +131,6 @@ We provide a complete pipeline to help you use your own customized materials (e.
     
 
 ## Acknowledgements
-RETA-LLM is part of YuLan, a open source LLM initiative proposed by Gaoling School of Artificial Intelligence, Renmin University of China. 
-
-RETA-LLM is still under development and there are many issues that need to be solved with great efforts. We sincerely welcome contributions on this open source toolkit.
-
 Thanks Jingtao for the great implementation of [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever).
 
 
