@@ -103,6 +103,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
 ## Case
    ![RETA-LLM case](./resource/case_zh.jpg)
+   
    A case of in-domain QA supported by RETA-LLM is shown. In this case, we use the provided `sample_data` as external knowledge but conduct more fine-grained html parsing.
 
 
