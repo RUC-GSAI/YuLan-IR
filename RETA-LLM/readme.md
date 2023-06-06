@@ -15,7 +15,7 @@ The overall framework of our toolkit is shown as follows: ![RETA-LLM Framework](
 In general, there includes five steps/modules in our RETA-LLM tookit. 
 
 - **Request Rewriting**: First, RETA-LLM utilizes LLMs to revise current request of users based on their histories to make it complete and clear. 
-- **Doc Retrieval**: Second, RETA-LLM uses the revised user request to retrieve relevant documents from customized document corpus. In our demo, We use [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever) as retriever. you can customize your own searcher.
+- **Doc Retrieval**: Second, RETA-LLM uses the revised user request to retrieve relevant documents from customized document corpus. In our demo, we use [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever) as retriever. you can customize your own searcher.
 - **Passage Extraction**: Third, since concatenating the whole relevant document content may be too long for LLMs to generate responses, RETA-LLM extracts relevance document fragments/passages by LLMs from the retrieved documents to form references for generation.
 - **Answer Generation**: Fourth, RETA-LLM provides the revised user request and references for LLM to generate answers.
 - **Fact checking**: Finally, RETA-LLM applies LLMs to verify whether the generate answers contain factual mistakes and output final responses for user request.
