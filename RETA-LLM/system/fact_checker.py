@@ -21,4 +21,5 @@ class Fact_Checker():
         #    return True
         #if ("yes" in output or "Yes" in ouput or "YES" in output) :
         #    return False
+        #return True
         return True
