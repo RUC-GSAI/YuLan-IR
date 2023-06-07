@@ -48,8 +48,8 @@ SPARSE_INDEX_PATH = "../index/sparse"
 DOC_PATH = "../json_data"
 DAM_NAME = "../index/dam_module"
 #if you do not conduct domain adaption in index_pipeline, use the following DAM_NAME
-#DAM_NAME = "jingtao/DAM-bert_base-mlm-dureader" for zh
-#DAM_NAME = "jingtao/DAM-bert_base-mlm-msmarco" for en
+#DAM_NAME = "jingtao/DAM-bert_base-mlm-dureader" #for zh
+#DAM_NAME = "jingtao/DAM-bert_base-mlm-msmarco" #for en
 
 #extractor_config
 if_extract = True #Extract passages from docs or directly use the contents
