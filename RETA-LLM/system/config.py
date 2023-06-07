@@ -37,8 +37,10 @@ openai_api_key = "your-key" #api_key for chatgpt if you use chatgpt
 #searcher_config
 cutoff = 1000 #cutoff for reference
 topk = 3 #numbers of relevant docs
-sparse_language = 'zh' #the language for sparse retrieval
-
+language = 'zh' #the language for retrieval('zh' or 'en')
+rem_dict = {"zh":"https://huggingface.co/jingtao/REM-bert_base-dense-distil-dureader/resolve/main/lora192-pa4.zip",
+            "en":"https://huggingface.co/jingtao/REM-bert_base-dense-distil-msmarco/resolve/main/lora192-pa4.zip"}
+REM_URL = rem_dict[language]
 ### index_pathr and data_dir should be consistent with the args in index_pipeline.py.
 DENSE_INDEX_PATH = "../index/dense/faiss.index"
 SPARSE_INDEX_PATH = "../index/sparse"

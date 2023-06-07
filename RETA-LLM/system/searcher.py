@@ -94,7 +94,7 @@ class Sparse_Searcher:
         self.all_doc = self.get_doc_from_folder()
         self.all_id_list = [item['id'] for item in self.all_doc]
         self.searcher = LuceneSearcher(SPARSE_INDEX_PATH)
-        self.searcher.set_language(sparse_language)
+        self.searcher.set_language(language)
     
     def get_doc_from_folder(self):
         """
