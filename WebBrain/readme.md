@@ -5,7 +5,7 @@
 In this paper, we introduce a new NLP task -- generating short factual articles with references for queries by mining supporting evidence from the Web. In this task, called WebBrain, the ultimate goal is to generate a fluent, informative, and factually-correct short article (e.g., a Wikipedia article) for a factual query unseen in Wikipedia. To enable experiments on WebBrain, we construct a large-scale dataset WebBrain-Raw by extracting English Wikipedia articles and their crawlable Wikipedia references. WebBrain-Raw is ten times larger than the previous biggest peer dataset, which can greatly benefit the research community. From WebBrain-Raw, we construct two task-specific datasets: WebBrain-R and WebBrain-G, which are used to train in-domain retriever and generator, respectively. Besides, we empirically analyze the performances of the current state-of-the-art NLP techniques on WebBrain and introduce a new framework ReGen, which enhances the generation factualness by improved evidence retrieval and task-specific pre-training for generation. Experiment results show that ReGen outperforms all baselines in both automatic and human evaluations.
 
 <p align="center">
-  <img src="./fig/model.png" alt="RecAgnet Framework" width="70%">
+  <img src="./fig/model.png" alt="ReGen Framework" width="70%">
   <br>
   <b>Figure 1</b>: Overview of WebBrain.
 </p>
@@ -26,7 +26,7 @@ Contact mail: ian[at]ruc.edu.cn
 
 
 ### Download
-We offer two methods for downloading the WebBrain datasets. The first option is to download the datasets directly from our self-maintained servers using this [URL](http://playbigdata.ruc.edu.cn/webbrain/). Please send us the application form to acquire the password. 
+We offer two methods for downloading the WebBrain datasets. The first option is to download the datasets directly from our self-maintained servers. Please send us the application form to acquire the url and password. 
 
 The second option is to access the datasets via Baidu Cloud Disk, which is readily available in China. If you encounter any difficulties downloading the datasets using either method, please don't hesitate to contact us for assistance.
 
