@@ -101,7 +101,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    Then you can try your own RETA-LLM toolkit on server.ip:1241 !
    
-   ** The configuration of the `web_demo.py` is in the `config.py` in `system` folder **.  Please adjust the configuration if you use your own data. 
+   **The configuration of the `web_demo.py` is in the `config.py` in `system` folder**.  Please adjust the configuration if you use your own data. 
    
    For the LLMs, we provide the model loading and response template for LLama and ChatGLM in `load_model.py` and `model_response.py` in `system` folder, If you want to use other LLMs, please adjust these two files.
 
