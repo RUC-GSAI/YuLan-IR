@@ -13,9 +13,9 @@ class Fact_Checker():
         return True
         ### TBD
         ### Following is a priliminary attempt for fact checking, which have not been sufficiently tested and verified. 
-        ### If you want to use the following code, we recommend to use YuLan-65B as LLM backbone.
         ### So we simply return True for fact cheking
-        ### We will soon release a useful version for this
+        ### If you do want to use the following code, we recommend to use YuLan-65B as LLM backbone.
+        ### We will soon release a more mature version for this
 
         #answer_input = fact_checking_template.format(reference = reference, answer = answer)
         #input_text = global_no_demon_template.format(input=answer_input)
