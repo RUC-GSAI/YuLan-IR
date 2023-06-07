@@ -12,7 +12,6 @@ POOLING_AVERAGE = "average"
 POOLING_CLS = "cls"
 POOLING_METHODS = [POOLING_AVERAGE, POOLING_CLS]
 
-REM_URL = "https://huggingface.co/jingtao/REM-bert_base-dense-distil-dureader/resolve/main/lora192-pa4.zip"
 
 def extract_text_embed(
         last_hidden_state: Tensor, 
