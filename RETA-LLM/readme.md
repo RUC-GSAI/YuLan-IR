@@ -75,7 +75,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    mv sample_url.txt url.txt
    ```
 
-1. run the `html2json.py` in the `html2json` folder to convert html resources to json files.
+1. Run the `html2json.py` in the `html2json` folder to convert html resources to json files.
    ```
    cd html2json
    python html2json.py --input_dir ../raw_data --output_dir ../json_data --url_file ../url.txt
@@ -84,7 +84,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `json_data` is the ouput data directory containing json files.
    
-2. run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index. Specifically, this indexer is designed for materials in Chinese, if you want to index materials for other languages. please adjust `index_pipeline.py`.
+2. Run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index. Specifically, this indexer is designed for materials in Chinese, if you want to index materials for other languages. please adjust `index_pipeline.py`.
    ```
    cd indexer
    python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type all --train_dam_flag
@@ -94,7 +94,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
 
 3. Prepare an LLM and its generating configuration json file in the `system` folder. Example jsons for YuLan, ChatGLM, Alpaca is shown in `system/llm_*.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
 
-4. run the `web_demo.py` in `system` folder to start serving. 
+4. Run the `web_demo.py` in `system` folder to start serving. 
    ```
    cd system
    streamlit run web_demo.py --server.port 1241
