@@ -167,7 +167,7 @@ class Index_Builder:
                             "--corpus_path", corpus_path,
                             "--output_dir", dam_path,
                             "--model_name_or_path", init_model,
-                            "--max_seq_length", "128",
+                            "--max_seq_length", "512",
                             "--gradient_accumulation_steps", "1",
                             "--per_device_train_batch_size", "64",
                             "--warmup_steps", "1000",
