@@ -38,6 +38,7 @@ openai_api_key = "your-key" #api_key for chatgpt if you use chatgpt
 cutoff = 1000 #cutoff for reference
 topk = 3 #numbers of relevant docs
 language = 'zh' #the language for retrieval('zh' or 'en')
+#The adapter download url should be consistent with the rem url in index_pipeline.py
 rem_dict = {"zh":"https://huggingface.co/jingtao/REM-bert_base-dense-distil-dureader/resolve/main/lora192-pa4.zip",
             "en":"https://huggingface.co/jingtao/REM-bert_base-dense-distil-msmarco/resolve/main/lora192-pa4.zip"}
 REM_URL = rem_dict[language]
