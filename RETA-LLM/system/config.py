@@ -4,8 +4,9 @@ import streamlit as st
 #instruction template
 global_template_yulan = "The following is a conversation between a human and an AI assistant namely YuLan, developed by GSAI, Renmin University of China. The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations
 global_no_demon_template_yulan = "The following is a conversation between a human and an AI assistant namely YuLan, developed by GSAI, Renmin University of China.The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{input}\n[|AI|]:"#global instructions without demonstrations 
-global_template_chatglm = "[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations 
-global_no_demon_template_chatglm = "{input}"#global instructions without demonstrations 
+global_template_other = "[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations 
+global_no_demon_template_other = "{input}"#global instructions without demonstrations 
+
 
 global_template = global_template_yulan
 global_no_demon_template = global_no_demon_template_yulan
