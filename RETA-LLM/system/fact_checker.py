@@ -17,12 +17,12 @@ class Fact_Checker():
         ### If you do want to use the following code, we recommend to use YuLan-65B as LLM backbone.
         ### We will soon release a more mature version for this
 
-        #answer_input = fact_checking_template.format(reference = reference, answer = answer)
-        #input_text = global_no_demon_template.format(input=answer_input)
-        #output = generate_response(self.model, self.tokenizer, input_text, **kwargs)
-        #if ("no" in output or "No" in output or "NO" in output) :
-        #    return True
-        #if ("yes" in output or "Yes" in output or "YES" in output) :
-        #    return False
-        #return True
+        answer_input = fact_checking_template.format(reference = reference, answer = answer)
+        input_text = global_no_demon_template.format(input=answer_input)
+        output = generate_response(self.model, self.tokenizer, input_text, **kwargs)
+        if ("no" in output or "No" in output or "NO" in output) :
+           return True
+        if ("yes" in output or "Yes" in output or "YES" in output) :
+           return False
+        return True
 
