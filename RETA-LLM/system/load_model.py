@@ -15,19 +15,19 @@ DEFAULT_EOS_TOKEN = "</s>"
 DEFAULT_BOS_TOKEN = "<s>"
 DEFAULT_UNK_TOKEN = "[UNK]"
 
+model_config = json.load(open(model_config_path, "r"))
+kwargs = {}
+if ("chatgpt" not in model_config_path):
+    for key, key_config in model_config['generate_parameter'].items():
+        value = getattr(st, key_config['component'])(key, key=f'{model_config["model_name"]}-{key}', **key_config['kwargs'])
+        kwargs[key] = value
+
+
 @st.cache_resource
 def get_model():
     '''
     Prepare the LLM, searcher and other modules.
     '''
-
-    model_config = json.load(open(model_config_path, "r"))
-    kwargs = {}
-    if ("chatgpt" not in model_config_path):
-        for key, key_config in model_config['generate_parameter'].items():
-            value = getattr(st, key_config['component'])(key, key=f'{model_config["model_name"]}-{key}', **key_config['kwargs'])
-            kwargs[key] = value
-
     ### Load your own LLM (api) by editing this
     if ("chatgpt" in model_config_path):
         model = "chatgpt"
