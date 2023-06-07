@@ -5,9 +5,10 @@ from model_response import generate_response
 # TBD
 
 class Fact_Checker():
-    def __init__(self, model, tokenizer) :
+    def __init__(self, model, tokenizer, kwargs) :
         self.model = model
         self.tokenizer = tokenizer
+        self.kwargs = kwargs
     
     def fact_check(self, reference, answer):
         return True
@@ -19,7 +20,7 @@ class Fact_Checker():
 
         answer_input = fact_checking_template.format(reference = reference, answer = answer)
         input_text = global_no_demon_template.format(input=answer_input)
-        output = generate_response(self.model, self.tokenizer, input_text, **kwargs)
+        output = generate_response(self.model, self.tokenizer, input_text, **self.kwargs)
         if ("no" in output or "No" in output or "NO" in output) :
            return True
         if ("yes" in output or "Yes" in output or "YES" in output) :

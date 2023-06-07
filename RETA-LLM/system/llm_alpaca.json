@@ -1,6 +1,6 @@
 {
-    "model_name": "Llama 13b",
-    "model_path": "../../llama_13b",
+    "model_name": "Alpaca 13b",
+    "model_path": "../../alpaca_13b",
     "device": "cuda:0",
     "generate_parameter": {
         "temperature": {

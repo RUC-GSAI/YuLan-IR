@@ -20,9 +20,18 @@ def get_model():
     '''
     Prepare the LLM, searcher and other modules.
     '''
+
+    model_config = json.load(open(model_config_path, "r"))
+    kwargs = {}
+    if ("chatgpt" not in model_config_path):
+        for key, key_config in model_config['generate_parameter'].items():
+            value = getattr(st, key_config['component'])(key, key=f'{model_config["model_name"]}-{key}', **key_config['kwargs'])
+            kwargs[key] = value
+
     ### Load your own LLM (api) by editing this
     if ("chatgpt" in model_config_path):
         model = "chatgpt"
+        tokenizer = ""
     
     if ("chatglm" in model_config_path) :
         model_config = json.load(open(model_config_path,"r"))
@@ -30,6 +39,7 @@ def get_model():
         tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
         model = AutoModel.from_pretrained(model_path, trust_remote_code=True).half().cuda()
         model = model.eval()
+        
 
     if ("llama" in model_config_path or "yulan" in model_config_path) :
         model_config = json.load(open(model_config_path,"r"))
@@ -78,14 +88,14 @@ def get_model():
     ###
 
 
-    passage_extractor = Passage_Extractor(model, tokenizer)
+    passage_extractor = Passage_Extractor(model, tokenizer, kwargs)
 
-    fact_checker = Fact_Checker(model, tokenizer)
+    fact_checker = Fact_Checker(model, tokenizer, kwargs)
 
     searcher = Dense_Searcher()
     
-    request_rewriter = Request_Rewriter(model, tokenizer)
+    request_rewriter = Request_Rewriter(model, tokenizer, kwargs)
     
-    answer_generator = Answer_Generator(model, tokenizer)
+    answer_generator = Answer_Generator(model, tokenizer, kwargs)
 
     return request_rewriter, searcher, passage_extractor, answer_generator, fact_checker

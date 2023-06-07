@@ -6,9 +6,10 @@ import streamlit as st
 
 class Request_Rewriter():
     
-    def __init__(self, model, tokenizer) :
+    def __init__(self, model, tokenizer, kwargs) :
         self.model = model
         self.tokenizer = tokenizer
+        self.kwargs = kwargs
     
     def request_rewrite(self, history_rewrite_request, request) :
         history_text = "".join(history_rewrite_request)
@@ -19,7 +20,7 @@ class Request_Rewriter():
 
         else :
             query_rewrite_input = global_no_demon_template.format(input=request_rewriting_template.format(history = history_text, request = request))
-            revised_request = generate_response(self.model, self.tokenizer, query_rewrite_input, **kwargs)
+            revised_request = generate_response(self.model, self.tokenizer, query_rewrite_input, **self.kwargs)
             
             #show the rewritten query on the demo to verficate whether the rewriting is correct.
             st.write("---")

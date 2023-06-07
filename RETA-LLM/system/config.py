@@ -2,13 +2,13 @@ import json
 import streamlit as st
 
 #instruction template
-global_template_en = "The following is a conversation between a human and an AI assistant namely JARVIS, developed by GSAI, Renmin University of China.The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations
-global_no_demon_template_en = "The following is a conversation between a human and an AI assistant namely JARVIS, developed by GSAI, Renmin University of China.The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{input}\n[|AI|]:"#global instructions without demonstrations 
-global_template_zh = "[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations 
-global_no_demon_template_zh = "{input}"#global instructions without demonstrations 
+global_template_yulan = "The following is a conversation between a human and an AI assistant namely YuLan, developed by GSAI, Renmin University of China. The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations
+global_no_demon_template_yulan = "The following is a conversation between a human and an AI assistant namely YuLan, developed by GSAI, Renmin University of China.The AI assistant gives helpful, detailed, and polite answers to the user's questions.\n[|Human|]:{input}\n[|AI|]:"#global instructions without demonstrations 
+global_template_chatglm = "[|Human|]:{demon1}\n[|AI|]:{summary1}\n[|Human|]:{demon2}\n[|AI|]:{summary2}\n[|Human|]:{input}\n[|AI|]:" #global instructions with two demonstrations 
+global_no_demon_template_chatglm = "{input}"#global instructions without demonstrations 
 
-global_template = global_template_en
-global_no_demon_template = global_no_demon_template_en
+global_template = global_template_yulan
+global_no_demon_template = global_no_demon_template_yulan
 
 answer_generation_template_en = 'Now, entirely based on the following reference, please answer the query more succinctly and professionally. The reference is delimited by triple brackets [[[]]]. The query is delimited by triple parentheses ((())). You are not allowed to add fabrications to your answers. Reference: [[[{context}]]], query: ((({question}))), answer:'#answer generation instruction 
 answer_generation_template_zh = '现在，请完全的基于用书名号分割《》的参考信息，简洁和专业的来回答引号“”分割的用户的问题。不允许在答案中添加编造成分，答案请使用中文。参考信息:《{context}》 问题:“{question}”' #answer generation instruction
@@ -30,12 +30,8 @@ fact_checking_template = fact_checking_template_en
 
 #model_config
 model_config_path = "./llm_yulan_large.json" #config path for LLM
-openai_api_key = "your-key" #api_key for chatgpt
-model_config = json.load(open(model_config_path, "r"))
-kwargs = {}
-for key, key_config in model_config['generate_parameter'].items():
-    value = getattr(st, key_config['component'])(key, key=f'{model_config["model_name"]}-{key}', **key_config['kwargs'])
-    kwargs[key] = value
+openai_api_key = "your-key" #api_key for chatgpt if you use chatgpt
+
 
 #searcher_config
 cutoff = 1500 #cutoff for reference
