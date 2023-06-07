@@ -30,7 +30,7 @@ fact_checking_template = fact_checking_template_en
 
 #model_config
 model_config_path = "./llm_yulan_small.json" #config path for LLM
-openai_api_key = "your-key"
+openai_api_key = "your-key" #api_key for chatgpt
 model_config = json.load(open(model_config_path, "r"))
 kwargs = {}
 for key, key_config in model_config['generate_parameter'].items():
@@ -42,8 +42,7 @@ cutoff = 1500 #cutoff for reference
 topk = 3 #numbers of relevant docs
 sparse_language = 'zh' #the language for sparse retrieval
 
-### index_save_dir and data_dir should be consistent with the args in index_pipeline.py.
-
+### index_pathr and data_dir should be consistent with the args in index_pipeline.py.
 DENSE_INDEX_PATH = "../index/dense/faiss.index"
 SPARSE_INDEX_PATH = "../index/sparse"
 DOC_PATH = "../json_data"
