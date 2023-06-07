@@ -93,7 +93,8 @@ class Index_Builder:
             use_content_type,
             cuda_id, 
             batch_size,
-            dam_path
+            dam_path,
+            language
     ):
         self.index_type = index_type   
         self.data_dir = data_dir      
@@ -103,9 +104,23 @@ class Index_Builder:
         self.cuda_id = cuda_id
         self.batch_size = batch_size
         self.dam_path = dam_path
+        self.language = language
 
         if not os.path.exists(index_save_dir):
             os.makedirs(index_save_dir)
+
+        # set default dam_path
+        if (not train_dam_flag) and (dam_path == None):
+            if language == "zh":
+                self.dam_path = "jingtao/DAM-bert_base-mlm-dureader"
+            else:
+                self.dam_path = "jingtao/DAM-bert_base-mlm-msmarco"
+        
+        # set REM url
+        if language == "zh":
+            self.rem_url = "https://huggingface.co/jingtao/REM-bert_base-dense-distil-dureader/resolve/main/lora192-pa4.zip"
+        else:
+            self.rem_url = "https://huggingface.co/jingtao/REM-bert_base-dense-distil-msmarco/resolve/main/lora192-pa4.zip"
 
     def build_index(self):
         if self.index_type == "sparse":
@@ -143,12 +158,16 @@ class Index_Builder:
         dam_path = self.index_save_dir + '/dam_module'
         if not check_dir(dam_path):
             warnings.warn("Overwrite trained DAM module!", UserWarning)
+        if self.language == "zh":
+            init_model = "jingtao/DAM-bert_base-mlm-dureader"
+        else:
+            init_model = "jingtao/DAM-bert_base-mlm-msmarco"
         training_args = ["--nproc_per_node", "1",
                             "-m", "train_dam_module",
                             "--corpus_path", corpus_path,
                             "--output_dir", dam_path,
-                            "--model_name_or_path", "jingtao/DAM-bert_base-mlm-dureader",
-                            "--max_seq_length", "512",
+                            "--model_name_or_path", init_model,
+                            "--max_seq_length", "128",
                             "--gradient_accumulation_steps", "1",
                             "--per_device_train_batch_size", "64",
                             "--warmup_steps", "1000",
@@ -175,7 +194,7 @@ class Index_Builder:
         config.similarity_metric, config.pooling = "ip", "average"
         tokenizer = AutoTokenizer.from_pretrained(dam_path, config=config)
         model = BertDense.from_pretrained(dam_path, config=config)
-        adapter_name = model.load_adapter(REM_URL)
+        adapter_name = model.load_adapter(self.rem_url)
         model.set_active_adapters(adapter_name)
         return model, tokenizer
 
@@ -193,10 +212,11 @@ class Index_Builder:
         print("Start building sparse index...")
         pyserini_args = ["--collection", "JsonCollection",
                          "--input", self.data_dir,
-                         "--language", "zh",
                          "--index", sparse_index_path,
                          "--generator", "DefaultLuceneDocumentGenerator",
                          "--threads", "1"]
+        if self.language == "zh":
+            pyserini_args += ["--language", "zh"]
         subprocess.run(["python", "-m", "pyserini.index.lucene"] + pyserini_args)
         print("Finish!")
         print(f"Sparse index path: {sparse_index_path}")
@@ -276,8 +296,10 @@ if __name__ == "__main__":
     parser.add_argument('--cuda_id', type=int, default=0)
     parser.add_argument('--batch_size', type=int, default=128, 
                         help="Batch size used when constructing vector representations of documents")
-    parser.add_argument('--dam_path', type=str, default="jingtao/DAM-bert_base-mlm-dureader", 
+    parser.add_argument('--dam_path', type=str, default=None, 
                         help="The path of the DAM to be used. This paramater will be used only when not training the DAM module.")
+    parser.add_argument('--language', type=str, default="zh", choices=['zh','en'],
+                        help="Language of the document.")
     args = parser.parse_args()
 
     index_builder = Index_Builder(index_type = args.index_type,
@@ -287,5 +309,6 @@ if __name__ == "__main__":
                                   use_content_type = args.use_content_type,
                                   cuda_id = args.cuda_id,
                                   batch_size = args.batch_size,
-                                  dam_path = args.dam_path)
+                                  dam_path = args.dam_path,
+                                  language = args.language)
     index_builder.build_index()
