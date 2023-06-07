@@ -92,7 +92,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption with the args `--train_dam_flag`. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
 
-3. Prepare an LLM and its generating configuration json file in the `system` folder. An example json for YuLan and ChatGLM is shown in `system/llm_yulan.json` and `system/llm_chatglm.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
+3. Prepare an LLM and its generating configuration json file in the `system` folder. Example jsons for YuLan, ChatGLM, Alpaca is shown in `system/llm_*.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
 
 4. run the `web_demo.py` in `system` folder to start serving. 
    ```
