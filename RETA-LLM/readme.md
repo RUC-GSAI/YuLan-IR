@@ -36,7 +36,7 @@ The overall framework of our toolkit is shown as follows: ![RETA-LLM Framework](
 In general, there includes five steps/modules in our RETA-LLM tookit. 
 
 - **Request Rewriting**: First, RETA-LLM utilizes LLMs to revise current request of users based on their histories to make it complete and clear. 
-- **Doc Retrieval**: Second, RETA-LLM uses the revised user request to retrieve relevant documents from customized document corpus. In our demo, we use [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever) as retriever. you can customize your own searcher.
+- **Doc Retrieval**: Second, RETA-LLM uses the revised user request to retrieve relevant documents from customized document corpus. In our demo, we use [disentangled-retriever](https://github.com/jingtaozhan/disentangled-retriever) as retriever for html materials in Chinese. you can customize your own searcher.
 - **Passage Extraction**: Third, since concatenating the whole relevant document content may be too long for LLMs to generate responses, RETA-LLM extracts relevance document fragments/passages by LLMs from the retrieved documents to form references for generation.
 - **Answer Generation**: Fourth, RETA-LLM provides the revised user request and references for LLM to generate answers.
 - **Fact checking**: Finally, RETA-LLM applies LLMs to verify whether the generate answers contain factual mistakes and output final responses for user request.
@@ -84,7 +84,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `json_data` is the ouput data directory containing json files.
    
-2. run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index.
+2. run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index. Specifically, this indexer is designed for materials in Chinese, if you want to index materials for other languages. please adjust `index_pipeline.py`.
    ```
    cd indexer
    python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type all --train_dam_flag
