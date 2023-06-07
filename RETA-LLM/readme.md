@@ -84,10 +84,10 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `json_data` is the ouput data directory containing json files.
    
-2. Run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index. Specifically, this indexer is designed for materials in Chinese, if you want to index materials for other languages. please adjust `index_pipeline.py`.
+2. Run the `index_pipeline.py` in the `indexer` folder to build faiss-supported index. Specifically, this indexer is designed for materials in Chinese and English, if you want to index materials for other languages. please adjust `index_pipeline.py`.
    ```
    cd indexer
-   python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type all --train_dam_flag
+   python index_pipeline.py --index_type all  --data_dir ../json_data  --index_save_dir ../index --batch_size 128 --use_content_type all --train_dam_flag --language zh
    cd ..
    ```
    The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption with the args `--train_dam_flag`. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
