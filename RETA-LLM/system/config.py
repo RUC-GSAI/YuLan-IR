@@ -35,7 +35,7 @@ openai_api_key = "your-key" #api_key for chatgpt if you use chatgpt
 
 
 #searcher_config
-cutoff = 1500 #cutoff for reference
+cutoff = 1000 #cutoff for reference
 topk = 3 #numbers of relevant docs
 sparse_language = 'zh' #the language for sparse retrieval
 
