@@ -92,7 +92,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    ```
    The `index` is the faiss-supported index directory. The args `--use_content_type` is used to indicate which parts (title, contents, all) of the documents is to used to build indexes. We suggest to conduct domain adaption with the args `--train_dam_flag`. If you choose not to, remove the `--train_dam_flag` args and change the `DAM_NAME` config in `./system/config.py` folder. 
 
-3. Prepare an LLM and its generating configuration json file in the `system` folder. Example jsons for [YuLan](https://github.com/RUC-GSAI/YuLan-Chat), [ChatGLM](https://github.com/THUDM/ChatGLM-6B), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) is shown in `system/llm_*.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
+3. Prepare an LLM and its generating configuration json file in the `system` folder. Example jsons for [YuLan-Chat](https://github.com/RUC-GSAI/YuLan-Chat), [ChatGLM](https://github.com/THUDM/ChatGLM-6B), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) is shown in `system/llm_*.json`. The genrating configuration mainly include the model path, temperature, top_p, top_k, etc. Specifically, you can even use differnt LLMs in different modules.
 
 4. Run the `web_demo.py` in `system` folder to start serving. 
    ```
@@ -103,7 +103,7 @@ We provide a complete pipeline to help you use your own customized materials (e.
    
    **The configuration of the `web_demo.py` is in the `config.py` in `system` folder**.  Please adjust the configuration if you use your own data. 
    
-   For the LLMs, we provide the model loading and response template for [YuLan](https://github.com/RUC-GSAI/YuLan-Chat), [ChatGLM](https://github.com/THUDM/ChatGLM-6B), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and ChatGPT in `load_model.py` and `model_response.py` in `system` folder, If you want to use other LLMs, please adjust these two files.
+   For the LLMs, we provide the model loading and response template for [YuLan-Chat](https://github.com/RUC-GSAI/YuLan-Chat), [ChatGLM](https://github.com/THUDM/ChatGLM-6B), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and ChatGPT in `load_model.py` and `model_response.py` in `system` folder, If you want to use other LLMs, please adjust these two files.
 
    For the searchers, we define a template for your customized searcher, see it in the `Common_Searcher` class in the `./system/searcher.py`.
 
