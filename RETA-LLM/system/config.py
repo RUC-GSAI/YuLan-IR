@@ -35,6 +35,7 @@ openai_api_key = "your-key" #api_key for chatgpt if you use chatgpt
 
 
 #searcher_config
+search_type = "dense" # "sparse" or "common"
 cutoff = 1000 #cutoff for reference
 topk = 3 #numbers of relevant docs
 language = 'zh' #the language for retrieval('zh' or 'en')

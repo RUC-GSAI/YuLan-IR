@@ -3,7 +3,7 @@ from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 from typing import List, Optional, Tuple, Union
 import torch
 import json
-from searcher import Dense_Searcher
+from searcher import *
 from answer_generator import Answer_Generator
 from request_rewriter import Request_Rewriter
 from passage_extractor import Passage_Extractor
@@ -92,7 +92,12 @@ def get_model():
 
     fact_checker = Fact_Checker(model, tokenizer, kwargs)
 
-    searcher = Dense_Searcher()
+    if (search_type == "dense") :
+        searcher = Dense_Searcher()
+    elif (search_type == "sparse") :
+        searcher = Sparse_Searcher()
+    else :
+        searcher = Common_Searcher()
     
     request_rewriter = Request_Rewriter(model, tokenizer, kwargs)
     
