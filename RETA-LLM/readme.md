@@ -7,7 +7,7 @@
 </div>
 
 
-**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including **request rewriting, document retrieval, passage extraction, answer generation, and fact checking** modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://github.com/RUC-GSAI/YuLan-IR/blob/main/RETA-LLM/resource/paper.pdf).
+**RETA-LLM** is a **RET**reival-**A**ugmented LLM toolkit to support research in retrieval-augmented generation and to help users build their own in-down LLM-based systems.  RETA-LLM provides five plug-and-play modules to support better interaction between IR systems and LLMs, including **request rewriting, document retrieval, passage extraction, answer generation, and fact checking** modules. A complete pipeline are also provided for researchers and users to build their RETA-LLM toolkits based on their own repository for in-domain LLM-based systems from scratch. Our paper can be found at [paper](https://arxiv.org/abs/2306.05212).
 
 ## Table of Contents
 
@@ -21,6 +21,7 @@
 - [Maintainers](#maintainers)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
+- [Citation](#citation)
 
 
 ## Background
@@ -138,3 +139,17 @@ Thanks Jingtao for the great implementation of [disentangled-retriever](https://
 
 ## License
 RETA-LLM uses [MIT License](https://github.com/RUC-GSAI/YuLan-IR/tree/main/RETA-LLM/LICENSE). All data and code in this project can only be used for academic purposes.
+
+## Citation
+Please cite the following paper as the reference if you use our code. [paper](https://arxiv.org/pdf/2306.05212.pdf)
+
+```
+@misc{liu2023retallm,
+      title={RETA-LLM: A Retrieval-Augmented Large Language Model Toolkit}, 
+      author={Jiongnan Liu and Jiajie Jin and Zihan Wang and Jiehan Cheng and Zhicheng Dou and Ji-Rong Wen},
+      year={2023},
+      eprint={2306.05212},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
+}
+```
