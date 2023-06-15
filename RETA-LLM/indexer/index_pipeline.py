@@ -162,6 +162,8 @@ class Index_Builder:
             init_model = "jingtao/DAM-bert_base-mlm-dureader"
         else:
             init_model = "jingtao/DAM-bert_base-mlm-msmarco"
+        # set batch size for training
+        batch_size = 64 if len(self.all_docs) > 64 else len(self.all_docs)
         training_args = ["--nproc_per_node", "1",
                             "-m", "train_dam_module",
                             "--corpus_path", corpus_path,
@@ -169,7 +171,7 @@ class Index_Builder:
                             "--model_name_or_path", init_model,
                             "--max_seq_length", "512",
                             "--gradient_accumulation_steps", "1",
-                            "--per_device_train_batch_size", "64",
+                            "--per_device_train_batch_size", str(batch_size),
                             "--warmup_steps", "1000",
                             "--fp16",
                             "--learning_rate", "2e-5",
