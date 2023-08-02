@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/yulan.jpg" width="400px">
+<img src="https://github.com/RUC-GSAI/YuLan-IR/blob/main/YuLan-logo.jpg" width="400px">
 <h1>RETA-LLM： A Retrieval-Augmented Large Language Model Toolkit</h1>
 <a href="https://github.com/RUC-GSAI/YuLan-IR">
     <img src="https://img.shields.io/badge/MIT-License-blue" alt="license">
