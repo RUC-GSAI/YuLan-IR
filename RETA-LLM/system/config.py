@@ -20,7 +20,7 @@ request_rewriting_template_zh = '你现在作为资深心理学家，你的工�
 request_rewriting_template = request_rewriting_template_en
 
 
-passage_extraction_template_en = "From the given document, please select and ouput the relevant document fragments which are related to the query. The document is delimited by triple brackets [[[]]]. The query is delimited by triple parentheses ((())). Note that the output must be fragments of the original document, not a summary of the document. If there is no fragment related to the query in the document, please output nothing. Document content: [[[{content}]]], query:((({question}))), relevant document fragments:"#passage extraction instruction 
+passage_extraction_template_en = "From the given document, please select and output the relevant document fragments which are related to the query. The document is delimited by triple brackets [[[]]]. The query is delimited by triple parentheses ((())). Note that the output must be fragments of the original document, not a summary of the document. If there is no fragment related to the query in the document, please output nothing. Document content: [[[{content}]]], query:((({question}))), relevant document fragments:"#passage extraction instruction 
 passage_extraction_template_zh = "请你从用书名号《》分割的文档内容中，选出和引号“”分割的查询有关的文档内容片段。注意，必须是文档原文片段，不能够总结和生成新的内容。文档内容：《{content}》，查询：“{question}”，相关文档片段："#passage extraction instruction 
 passage_extraction_template = passage_extraction_template_en
 
