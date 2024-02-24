@@ -72,7 +72,7 @@ dependencies:
   - openssl=1.1.1t
   - pip=23.0.1
   - pypdf2=2.10.5
-  - python=3.8.16
+  - python=3.9.10
   - readline=8.1.2
   - setuptools=66.0.0
   - sqlite=3.40.1
