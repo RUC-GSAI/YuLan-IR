@@ -51,12 +51,11 @@ The requirements of our RETA-LLM toolkit is wrapped in the `environment.yml` fil
  conda activate retallm
  
  pip install adapter-transformers --force-reinstall
- pip install transformers==4.28.0 --force-reinstall
- git clone https://github.com/adapter-hub/adapter-transformers.git  
+ pip install transformers==4.28.0 --force-reinstall huggingface-hub==0.13.0
+ git clone https://github.com/adapter-hub/adapter-transformers-legacy.git
  mv adapter-transformers adaptertransformers
 
  #The above four lines are used to fix the conflicts between adapter-transformers and transfomers. Please don't adjust the order bewteen them.
-
 ```
 
 
