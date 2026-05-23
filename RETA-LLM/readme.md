@@ -119,7 +119,7 @@ RETA-LLM is still under development and there are many issues that need to be so
     
 - [ ] Better fact checking module.
 - [ ] Add parser for .doc / .pdf / .ppt resources.
-- [ ] Add active retreival augumentation.
+- [ ] Add active retrieval augmentation.
 - [ ] More modulized and configurable.
 - [ ] ...
 
